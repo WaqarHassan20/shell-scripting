@@ -2,12 +2,12 @@
 #Above notation is called as shebang
 
 #create a folder first
-mkdir NewFolder
+mkdir TestingFolder
 
 #now change directory in it
-cd NewFolder
+cd TestingFolder
 
 #create two files init
 touch FirstFile.ts SecondFile.py
 
-echo "Folder created successfully"
+echo "Testing Folder created successfully"
