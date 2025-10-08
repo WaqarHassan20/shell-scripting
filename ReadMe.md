@@ -1,6 +1,4 @@
-============================================================
-=================== 🧠 SHELL COMMANDS ======================
-============================================================
+========= 🧠 SHELL COMMANDS =========
 
 📂 Basic File & Directory Commands
 
@@ -64,85 +62,114 @@ This command is incorrect because the pipe (|) sends the output of the first com
 to the second command (echo), but echo does not read from standard input, so the date output is ignored.
 
 
-============================================================
-================ FILE PERMISSIONS (NUMERIC) ================
-============================================================
-
-r = 4   (read)
-w = 2   (write)
-x = 1   (execute)
-
-Add them up to set permissions:
-
-0 = ---   (no permission)
-1 = --x   (execute only)
-2 = -w-   (write only)
-3 = -wx   (write + execute)
-4 = r--   (read only)
-5 = r-x   (read + execute)
-6 = rw-   (read + write)
-7 = rwx   (read + write + execute)
-
-Examples:
-
-chmod 755 file   -> rwx for owner, r-x for group, r-x for others
-chmod 644 file   -> rw- for owner, r-- for group, r-- for others
-chmod 700 file   -> rwx for owner, --- for group, --- for others
+========= FILE PERMISSIONS (NUMERIC) =========
 
 
-============================================================
-====================== VI COMMANDS =========================
-============================================================
+🔐 FILE PERMISSIONS (NUMERIC MODE)
+
+| Symbol | Value | Description        |
+| :----- | :---: | :----------------- |
+| **r**  |   4   | Read permission    |
+| **w**  |   2   | Write permission   |
+| **x**  |   1   | Execute permission |
 
 
-:help                -> Open help manual
+🧮 Add them up to set permissions
 
-#!/bin/bash   "#!/" this notation is called shebang
+| Number | Symbol | Meaning                |
+| :----: | :----: | :--------------------- |
+|  **0** |  `---` | No permission          |
+|  **1** |  `--x` | Execute only           |
+|  **2** |  `-w-` | Write only             |
+|  **3** |  `-wx` | Write + Execute        |
+|  **4** |  `r--` | Read only              |
+|  **5** |  `r-x` | Read + Execute         |
+|  **6** |  `rw-` | Read + Write           |
+|  **7** |  `rwx` | Read + Write + Execute |
 
-=== Modes ===
-Esc + i              -> Insert mode (start editing)
-Esc + a              -> Append text after cursor
-Esc + o              -> Open a new line below
-Esc + I              -> Insert at beginning of line
-Esc + A              -> Insert at end of line
 
-=== Save & Exit ===
-:w                   -> Save file
-:q                   -> Quit
-:q!                  -> Quit without saving
-:wq OR :x            -> Save and quit
-ZZ                   -> Save and quit (shortcut)
+🧱 Examples
 
-=== Navigation ===
-h                    -> Move left
-l                    -> Move right
-k                    -> Move up
-j                    -> Move down
-0                    -> Jump to start of line
-$                    -> Jump to end of line
-gg                   -> Go to start of file
-G                    -> Go to end of file
-:n                   -> Go to line number n
+| Command          | Owner | Group | Others | Description                                      |
+| ---------------- | :---: | :---: | :----: | ------------------------------------------------ |
+| `chmod 755 file` |  rwx  |  r-x  |   r-x  | Full access for owner, read + execute for others |
+| `chmod 644 file` |  rw-  |  r--  |   r--  | Read + write for owner, read-only for others     |
+| `chmod 700 file` |  rwx  |  ---  |   ---  | Full access for owner only                       |
 
-=== Editing ===
-x                    -> Delete character
-dd                   -> Delete current line
-yy                   -> Copy (yank) current line
-p                    -> Paste after cursor
-P                    -> Paste before cursor
-u                    -> Undo last change
-Ctrl + r             -> Redo
 
-=== Search ===
-/word                -> Search forward for "word"
-?word                -> Search backward for "word"
-n                    -> Repeat search in same direction
-N                    -> Repeat search in opposite direction
 
-============================================================
-============================================================
-============================================================
+========= 📝 VIM / VI COMMANDS =========
 
+
+🧭 General Info
+
+| Command       | Description                                                        |
+| ------------- | ------------------------------------------------------------------ |
+| `:help`       | Open the help manual in Vim.                                       |
+| `#!/bin/bash` | **Shebang** – tells the system to run the script using Bash shell. |
+
+
+✏️ Modes in Vim 
+
+| Keys      | Mode / Action            | Description                              |
+| --------- | ------------------------ | ---------------------------------------- |
+| `Esc + i` | **Insert Mode**          | Start editing text.                      |
+| `Esc + a` | **Append Mode**          | Add text after the cursor.               |
+| `Esc + o` | **Open New Line**        | Insert a new line below the current one. |
+| `Esc + I` | **Insert at Line Start** | Move to beginning and start editing.     |
+| `Esc + A` | **Insert at Line End**   | Move to end and start editing.           |
+
+
+💾 Save & Exit Commands
+
+| Command       | Action                    |
+| ------------- | ------------------------- |
+| `:w`          | Save file.                |
+| `:q`          | Quit Vim.                 |
+| `:q!`         | Quit without saving.      |
+| `:wq` or `:x` | Save and quit.            |
+| `ZZ`          | Save and quit (shortcut). |
+
+
+🧭 Navigation Commands
+
+| Command | Action                   |
+| ------- | ------------------------ |
+| `h`     | Move left.               |
+| `l`     | Move right.              |
+| `k`     | Move up.                 |
+| `j`     | Move down.               |
+| `0`     | Jump to start of line.   |
+| `$`     | Jump to end of line.     |
+| `gg`    | Go to start of file.     |
+| `G`     | Go to end of file.       |
+| `:n`    | Go to line number **n**. |
+
+
+✂️ Editing Commands
+
+| Command    | Action                    |
+| ---------- | ------------------------- |
+| `x`        | Delete a character.       |
+| `dd`       | Delete current line.      |
+| `yy`       | Copy (yank) current line. |
+| `p`        | Paste after cursor.       |
+| `P`        | Paste before cursor.      |
+| `u`        | Undo last change.         |
+| `Ctrl + r` | Redo the undone change.   |
+
+
+🔍 Search Commands
+
+| Command | Action                               |
+| ------- | ------------------------------------ |
+| `/word` | Search **forward** for “word”.       |
+| `?word` | Search **backward** for “word”.      |
+| `n`     | Repeat search in same direction.     |
+| `N`     | Repeat search in opposite direction. |
+
+
+==================
 
 # 🐚 My Shell Scripting Journey
 
