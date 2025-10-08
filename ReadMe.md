@@ -1,4 +1,4 @@
-========= 🧠 SHELL COMMANDS =========
+# 🧠 SHELL COMMANDS
 
 📂 Basic File & Directory Commands
 
