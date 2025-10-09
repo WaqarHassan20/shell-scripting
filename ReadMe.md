@@ -150,6 +150,22 @@ chmod +x Part_01/01_First-Script.sh
 - **Purpose:** Text processing and pattern matching demonstration
 - **Learning focus:** Grep operations, text manipulation, output formatting
 
+### 🎓 Part 03 - Interview Preparation & Advanced Logic
+**[01_DividingQuestion.sh](Part_03/01_DividingQuestion.sh)**
+- **Purpose:** Mathematical logic implementation
+- **What it does:** Finds numbers divisible by 3 or 5 but not by 15 (1-30 range)
+- **Learning focus:** Conditional logic, mathematical operations, loop structures
+
+**[02_InterviewQuestions.sh](Part_03/02_InterviewQuestions.sh)**
+- **Purpose:** Comprehensive shell scripting interview preparation
+- **Features:**
+  - 23+ interview questions with detailed answers
+  - Practical code examples and demonstrations
+  - Advanced concepts (arrays, regex, error handling)
+  - System administration challenges
+  - International interview standards
+- **Learning focus:** Interview preparation, best practices, advanced shell concepts
+
 ## ⚡ Usage Examples
 
 ### 🏃‍♂️ Quick Run Commands
@@ -162,6 +178,13 @@ chmod +x Part_01/01_First-Script.sh
 
 # 🔍 Explore grep functionality  
 ./Part_02/02_Grep_Command.sh
+
+# 🧮 Test number division logic
+./Part_03/01_DividingQuestion.sh
+
+# 🎯 Study interview questions (source and call functions)
+source Part_03/02_InterviewQuestions.sh
+numbers_divisible_not_15  # Example function call
 ```
 
 ## 💡 Learning Highlights
@@ -171,6 +194,8 @@ chmod +x Part_01/01_First-Script.sh
 | 📂 File Operations | `01_First-Script.sh` | Automated directory structure creation |
 | 🛠️ System Monitoring | `01_Node_Health.sh` | Real-time system diagnostics |
 | 🔍 Text Processing | `02_Grep_Command.sh` | Pattern matching and data extraction |
+| 🧮 Mathematical Logic | `01_DividingQuestion.sh` | Complex conditional operations |
+| 🎓 Interview Prep | `02_InterviewQuestions.sh` | Professional shell scripting knowledge |
 
 ## 🚨 Important Notes
 
@@ -181,9 +206,10 @@ chmod +x Part_01/01_First-Script.sh
 
 ## 📊 Repository Stats
 
-- 📁 **Total Scripts:** 3
-- 🎯 **Learning Parts:** 2  
+- 📁 **Total Scripts:** 5
+- 🎯 **Learning Parts:** 3  
 - 💻 **Languages:** Bash/Shell
+- 🔥 **Interview Questions:** 23+
 - 📅 **Last Updated:** October 2025
 
 ---
