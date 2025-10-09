@@ -206,7 +206,7 @@ numbers_divisible_not_15  # Example function call
 
 ## 📊 Repository Stats
 
-- 📁 **Total Scripts:** 5
+- 📁 **Total Scripts:** 5q
 - 🎯 **Learning Parts:** 3  
 - 💻 **Languages:** Bash/Shell
 - 🔥 **Interview Questions:** 23+
